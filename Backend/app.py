@@ -1,7 +1,9 @@
 from flask import Flask
+from flask_cors import CORS
 from main import get_weather
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/<location>")
