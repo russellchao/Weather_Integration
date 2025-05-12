@@ -1,6 +1,5 @@
-from weather_api_key import api_key
+from weather_api_key import api_key # Hidden from public
 import requests
-import json
 
 
 
@@ -18,11 +17,12 @@ def get_weather(location):
 
 if __name__ == "__main__": 
 
+    # Only used for testing on terminal
+
     while True:
         location = input("Enter your city, zip, or postcode: ")
         
         weather_data = get_weather(location)
-        # print(weather_data)
         
         city = weather_data['location']['name']
         region = weather_data['location']['region']
@@ -31,3 +31,4 @@ if __name__ == "__main__":
 
         print(f"Location: {city}, {region}, {country}")
         print(f"Weather conditions: {condition}\n")
+
