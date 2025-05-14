@@ -9,7 +9,7 @@ def get_weather(location):
 
     if response.status_code == 200:
         weather_data = response.json()
-        return weather_data  # You can customize this response format
+        return weather_data  
     else:
         return {"error": "Unable to fetch weather data. Make sure your location is valid.\n"}, response.status_code
 
