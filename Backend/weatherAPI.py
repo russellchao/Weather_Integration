@@ -17,7 +17,7 @@ def get_weather(location):
 
 if __name__ == "__main__": 
 
-    # Only used for testing on terminal
+    # Only used for testing on terminal 
 
     while True:
         location = input("Enter your city, zip, or postcode: ")
