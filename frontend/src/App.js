@@ -8,7 +8,6 @@ function App() {
   const [full_location, setFullLocation] = useState(""); 
   const [condition, setCondition] = useState("");
   const [searched, setSearched] = useState(false); 
-  const [background, setBackground] = useState("../images/partly-cloudy.jpg");
 
 
 
@@ -36,11 +35,6 @@ function App() {
           const [resFullLocation, resCondition] = result;
           setFullLocation(resFullLocation); 
           setCondition(resCondition); 
-
-          // Adjust background based on condition
-          const lower = resCondition.toLowerCase(); 
-          // if (condition.includes("sunny"))
-          // if (lower.includes("partly cloudy")) { setBackground('../images/partly-cloudy.jpg'); };
         }
       };
       getCondition(); 
@@ -53,16 +47,7 @@ function App() {
 
 
   return (
-    <div 
-      className="App" 
-      style={{
-        backgroundImage: new URL(background),
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        minHeight: "100vh"
-      }}
-    >
+    <div className="App" >
 
       <h1>Get weather in your location</h1>
 
